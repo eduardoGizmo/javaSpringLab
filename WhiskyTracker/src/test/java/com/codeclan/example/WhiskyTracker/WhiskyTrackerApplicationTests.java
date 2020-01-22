@@ -47,6 +47,12 @@ public class WhiskyTrackerApplicationTests {
 		assertEquals("The Macallan Anniversary Malt", found.get(0).getName());
 	}
 
+	@Test
+	public void canFindWhiskiesByRegion(){
+		List<Whisky> found = whiskyRepository.findWhiskyByDistilleryRegion("Lowland");
+		assertEquals("The Rosebank 12 - Flora and Fona", found.get(0).getName());
+	}
+
 //	@Test
 //	public void canFindDistilleriesThatHaveWhiskiesAged(){
 //
